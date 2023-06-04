@@ -1,37 +1,28 @@
-import React, {Component} from "react";
+import React, { useState, useEffect } from 'react';
 
-class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            resp: []
-        }
-        this.fetchStatus = this.fetchStatus.bind(this);
-    }
-    componentDidMount() {
-        this.fetchStatus()
-    }
-    fetchStatus() {
+const Home = () => {
+    const [resp, setResp] = useState({});
+
+    useEffect(() => {
+        fetchStatus();
+    }, []);
+
+    const fetchStatus = () => {
         fetch('http://127.0.0.1:5000')
             .then(response => response.json())
-            .then(r => {
-                this.setState(
-                    {
-                        resp: r
-                    }
-                )
+            .then(data => {
+                setResp(data);
             })
+            .catch(error => {
+                console.error('Error fetching status:', error);
+            });
     }
 
-    render(){
-        return( <
-            div className = "Home" > {
-                this.state.resp.Status
-            }
+    return (
+        <div className="Home">
+            {resp.Status}
         </div>
-        )
-    }
-
+    );
 }
 
-export default Home
+export default Home;
