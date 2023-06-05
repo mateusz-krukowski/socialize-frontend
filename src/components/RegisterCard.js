@@ -1,28 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
+import {fetchData} from "../API";
 import './RegisterCard.css'
 
 export default function RegisterCard() {
+    const [data,setData] = useState({email:"",username:"",password:""})
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-    const validatePassword = () => {
-        var password = document.getElementById("password");
-        var confirm_password = document.getElementById("confirm-password");
+        console.log(data)
 
-        if (password.value !== confirm_password.value) {
-            confirm_password.setCustomValidity("Passwords need to match");
-        }
-    }
+        fetchData('http://127.0.0.1:5000/register', "POST", data)
+            .then((response) => {
+                console.log(response);
+                alert(response['response'])
+            })
+            .catch((error) => {
+                console.error("Error sending data:", error);
+            });
+    };
 
     return (
         <div className='RegisterCard'>
-            <form className='register-form' action='/register' method='POST'>
+            <form className='register-form' action='/register' method='POST' onSubmit={handleSubmit}>
                 <label>email</label>
-                <input type='email' placeholder='you@example.com' />
+                <input type='email' name='email' placeholder='you@example.com'/>
                 <label>username</label>
-                <input type='text' placeholder='pick your username' />
+                <input type='text' name='username' placeholder='pick your username' />
                 <label>password</label>
-                <input type='password' id='password' placeholder='create a password' onChange={validatePassword} />
-                <label>confirm your password</label>
-                <input type='password' id='confirm-password' placeholder='confirm your password' onChange={validatePassword} />
+                <input type='password' name='password'  placeholder='create a password'/>
                 <input className='submit' type='submit' value='Sign Up' />
             </form>
         </div>
