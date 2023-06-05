@@ -4,6 +4,13 @@ import './RegisterCard.css'
 
 export default function RegisterCard() {
     const [data,setData] = useState({email:"",username:"",password:""})
+
+    const handleChange = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setData({...data, [name]:value})
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -23,11 +30,11 @@ export default function RegisterCard() {
         <div className='RegisterCard'>
             <form className='register-form' action='/register' method='POST' onSubmit={handleSubmit}>
                 <label>email</label>
-                <input type='email' name='email' placeholder='you@example.com'/>
+                <input type='email' id='email' name='email' onChange={handleChange} value={data.email} placeholder='you@example.com'/>
                 <label>username</label>
-                <input type='text' name='username' placeholder='pick your username' />
+                <input type='text' id='username' name='username' onChange={handleChange} value={data.username} placeholder='pick your username' />
                 <label>password</label>
-                <input type='password' name='password'  placeholder='create a password'/>
+                <input type='password' id='password' name='password' onChange={handleChange} value={data.password} placeholder='create a password'/>
                 <input className='submit' type='submit' value='Sign Up' />
             </form>
         </div>
