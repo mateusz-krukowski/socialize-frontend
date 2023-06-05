@@ -1,26 +1,25 @@
 import React, { useState, useEffect } from 'react';
+import {fetchData} from "../API";
+import HeaderHero from "./HeaderHero";
+import RegisterCard from "./RegisterCard";
+import WelcomeCard from "./WelcomeCard";
 
 const Home = () => {
-    const [resp, setResp] = useState({});
+    const [data, setData] = useState({});
 
     useEffect(() => {
-        fetchStatus();
-    }, []);
-
-    const fetchStatus = () => {
-        fetch('http://127.0.0.1:5000')
-            .then(response => response.json())
+        fetchData('http://127.0.0.1:5000')
             .then(data => {
-                setResp(data);
-            })
-            .catch(error => {
-                console.error('Error fetching status:', error);
+                setData(data);
             });
-    }
+    }, []);
 
     return (
         <div className="Home">
-            {resp.Status}
+            <HeaderHero/>
+            {data.Status}
+            <WelcomeCard/>
+            <RegisterCard/>
         </div>
     );
 }
