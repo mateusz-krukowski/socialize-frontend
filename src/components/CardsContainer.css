@@ -1,0 +1,16 @@
+.cards-container {
+    margin: 80px 20px auto;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

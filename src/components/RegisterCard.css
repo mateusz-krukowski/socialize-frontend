@@ -1,0 +1,19 @@
+.RegisterCard{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.register-form {
+    display: inline-flex;
+    flex-direction: column;
+}
+.register-form > input {
+    width: 300px;
+    height: 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.register-form > label {
+    margin-bottom: 5px;
+}

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import {fetchData} from "../API";
 import HeaderHero from "./HeaderHero";
-import RegisterCard from "./RegisterCard";
-import WelcomeCard from "./WelcomeCard";
+import CardsContainer from "./CardsContainer";
+import Footer from './Footer';
+import './Home.css';
 
 const Home = () => {
     const [data, setData] = useState({});
@@ -17,9 +18,8 @@ const Home = () => {
     return (
         <div className="Home">
             <HeaderHero/>
-            {data.Status}
-            <WelcomeCard/>
-            <RegisterCard/>
+            <CardsContainer/>
+            <Footer/>
         </div>
     );
 }

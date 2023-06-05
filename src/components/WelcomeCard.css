@@ -1,20 +1,21 @@
-.WelcomeCard{
-    border: 2px solid black;
-    border-radius: 30px;
-    width: 100%;
+.WelcomeCard {
     max-width: 584px;
     height: 496px;
-
 }
 
+.welcome {
+    font-weight: normal;
+    font-size: 50px;
+}
 
-
-.welcome-content-wrapper{
+.welcome-content-wrapper {
     margin:0px 15px 0px 15px;
 }
 
 .welcome-content {
     white-space: pre-line;
     text-align: justify;
-    justify-content: initial;
+    font-weight: lighter;
+    font-size: 20px;
+    margin-top: 20px;
 }

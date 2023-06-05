@@ -4,7 +4,7 @@ import './WelcomeCard.css'
 export default function WelcomeCard() {
     return(
         <div className='WelcomeCard' id="welcome-card">
-            <h2 className='welcome' >Welcome to Socialize</h2>
+            <h5 className='welcome' >Welcome to Socialize</h5>
             <div className='welcome-content-wrapper'>
                 <p className='welcome-content'>
 

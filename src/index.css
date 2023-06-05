@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+}
+html, body, #root, .App {
+  height: 100%;
+}
+
 @font-face {
   font-family: Univers-light-normal;
   src: url('../public/Univers-Font/Univers-light-normal.ttf')
