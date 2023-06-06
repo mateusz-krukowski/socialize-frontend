@@ -1,6 +1,6 @@
 import './App.css';
-import  Home from './components/Home'
-import Dashboard from "./components/Dashboard";
+import  Home from './pages/Home/Home'
+import Dashboard from "./pages/Dashboard/Dashboard";
 import {useEffect, useState} from "react";
 import Cookies from 'js-cookie';
 
@@ -18,7 +18,13 @@ function App() {
 
   return (
     <div className="App">
-        {isAuthenticated? <Dashboard setIsAuthenticated={setIsAuthenticated}/> : <Home setIsAuthenticated={setIsAuthenticated}/>}
+        {
+            isAuthenticated
+            ?
+            <Dashboard setIsAuthenticated={setIsAuthenticated}/>
+            :
+            <Home setIsAuthenticated={setIsAuthenticated}/>
+        }
 
     </div>
   );

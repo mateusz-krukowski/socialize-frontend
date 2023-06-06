@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {fetchData} from "../API";
+import {fetchData} from "../../API";
 import './RegisterCard.css'
 
 export default function RegisterCard() {

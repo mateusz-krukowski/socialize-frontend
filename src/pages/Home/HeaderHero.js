@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Cookies from "js-cookie";
-import {fetchData} from "../API";
+import {fetchData} from "../../API";
 import './HeaderHero.css'
 
 export default function HeaderHero({setIsAuthenticated}) {
