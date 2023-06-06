@@ -1,8 +1,7 @@
-import React from 'react';
+import React,{useState} from 'react';
 import HeaderHero from "./HeaderHero";
 import CardsContainer from "./CardsContainer";
 import Footer from '../../components/Footer';
-import './Home.css';
 
 const Home = ({setIsAuthenticated}) => {
 

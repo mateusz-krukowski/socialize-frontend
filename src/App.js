@@ -1,8 +1,8 @@
 import './App.css';
 import  Home from './pages/Home/Home'
-import Dashboard from "./pages/Dashboard/Dashboard";
 import {useEffect, useState} from "react";
 import Cookies from 'js-cookie';
+import RoutingComponent from "./pages/Dashboard/RoutingComponent";
 
 function App() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -18,13 +18,8 @@ function App() {
 
   return (
     <div className="App">
-        {
-            isAuthenticated
-            ?
-            <Dashboard setIsAuthenticated={setIsAuthenticated}/>
-            :
-            <Home setIsAuthenticated={setIsAuthenticated}/>
-        }
+
+        {isAuthenticated ? <RoutingComponent setIsAuthenticated={setIsAuthenticated}/> : <Home setIsAuthenticated={setIsAuthenticated}/>}
 
     </div>
   );

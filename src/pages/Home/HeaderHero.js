@@ -14,21 +14,21 @@ export default function HeaderHero({setIsAuthenticated}) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log(data)
+        console.log(data);
 
-        fetchData('http://127.0.0.1:5000/login', "POST", data)
+        fetchData('http://127.0.0.1:5000/login', 'POST', data)
             .then((response) => {
-                console.log(response);
-                alert(response['response']);
-                if(response.status===200){
+                console.log(response.status);
+                if (response.status === 200) {
+                    alert(response.data.response);
                     setIsAuthenticated(true);
                     Cookies.set('isAuthenticated', 'true', { expires: 7 });
+                } else {
+                    alert(response.data.response);
                 }
-
-
             })
             .catch((error) => {
-                console.error("Error sending data:", error);
+                console.error('Błąd podczas wysyłania danych:', error);
             });
     };
 
