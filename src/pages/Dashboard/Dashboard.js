@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
+import HeaderMain from "./HeaderMain";
+import Footer from "../../components/Footer";
 
 export default function Dashboard({ setIsAuthenticated }) {
     const [username, setUsername] = useState("");
@@ -15,12 +17,16 @@ export default function Dashboard({ setIsAuthenticated }) {
         setIsAuthenticated(false);
         Cookies.remove("isAuthenticated");
         Cookies.remove("username");
+        Cookies.remove("isAdmin");
     };
 
     return (
-        <div>
-            <h1>Welcome to the Dashboard, {username}!</h1>
+        <div id="dashboard">
+            <HeaderMain/>
+            <h1>Welcome to the Dashboard {username}!</h1>
             <button onClick={handleLogout}>Logout</button>
+            <Footer/>
         </div>
+
     );
 }

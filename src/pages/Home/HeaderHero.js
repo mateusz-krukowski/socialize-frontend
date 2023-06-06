@@ -18,11 +18,14 @@ export default function HeaderHero({setIsAuthenticated}) {
 
         fetchData('http://127.0.0.1:5000/login', 'POST', data)
             .then((response) => {
-                console.log(response.status);
+                console.log(response.data);
                 if (response.status === 200) {
                     alert(response.data.response);
                     setIsAuthenticated(true);
                     Cookies.set('isAuthenticated', 'true', { expires: 7 });
+                    console.log(response.data.username)
+                    Cookies.set('username',response.data.username,{expires: 7})
+
                 } else {
                     alert(response.data.response);
                 }

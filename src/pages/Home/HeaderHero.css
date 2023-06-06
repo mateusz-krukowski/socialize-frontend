@@ -6,6 +6,8 @@ header {
     display: flex;
     background-color: #242424;
     height: 56px;
+    position: sticky;
+    top: 0;
 }
 
 .logo-title {

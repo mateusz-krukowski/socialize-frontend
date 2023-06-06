@@ -1,6 +1,7 @@
 .Footer {
     border-top: #242424 1px solid;
-    margin-top: calc(100vh - 500px);
     width: 100%;
+    position: absolute;
+    bottom: 0;
     padding: 10px 0;
 }
