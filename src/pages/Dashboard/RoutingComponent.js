@@ -9,9 +9,9 @@ export default function RoutingComponent({ setIsAuthenticated }) {
         <Router>
             <Routes>
                 <Route path="/" element={<Dashboard setIsAuthenticated={setIsAuthenticated}/>} />
-                <Route path="/user" element={<Profile />} />
-                <Route path="/chatroom" element={<ChatRoom />} />
-                <Route path="/admin" element={<AdminPanel />} />
+                <Route path="/user/:username" element={<Profile setIsAuthenticated={setIsAuthenticated}/>} />
+                <Route path="/chatroom" element={<ChatRoom setIsAuthenticated={setIsAuthenticated}/>} />
+                <Route path="/admin" element={<AdminPanel setIsAuthenticated={setIsAuthenticated}/>} />
             </Routes>
         </Router>
     );

@@ -1,0 +1,22 @@
+.header-main {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.logout-button{
+
+
+
+}
+.links-container {
+    margin: 10px 50px 10px auto;
+    color: white;
+}
+a {
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+}
+a::target-text{}
