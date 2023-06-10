@@ -11,6 +11,9 @@
 }
 
 .message-input{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
     position: fixed;
     margin: auto auto 0 auto ;
     left: 50%;
@@ -18,4 +21,13 @@
     bottom: 0;
     width: 40%;
     height: 50px;
+}
+.message-input > button {
+    width: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .chat-card{
+        width: 90%;
+    }
 }
