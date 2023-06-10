@@ -2,12 +2,20 @@
     display: flex;
     flex-flow: row;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .logout-button{
+    border-radius: 10px;
+    width: 70px;
+    background-color: lightgray;
 
 
-
+}
+.logout-button:hover{
+    background-color: white;
 }
 .links-container {
     margin: 10px 50px 10px auto;
@@ -18,5 +26,8 @@ a {
     margin-right: 10px;
     text-decoration: none;
     color: white;
+}
+a:hover{
+    color: LightGray;
 }
 a::target-text{}

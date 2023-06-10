@@ -9,8 +9,10 @@ const Profile = ({setIsAuthenticated}) => {
     return (
         <div className="user-profile">
             <HeaderMain setIsAuthenticated={setIsAuthenticated}/>
+            <main>
             <h1>Profile: {username}</h1>
             <Footer/>
+            </main>
         </div>
     );
 };

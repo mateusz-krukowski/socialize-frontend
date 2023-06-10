@@ -1,0 +1,21 @@
+
+.chat-card {
+    border: 1px solid black;
+    max-width: 896px;
+    position: relative;
+    height: 100%;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+
+}
+
+.message-input{
+    position: fixed;
+    margin: auto auto 0 auto ;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    bottom: 0;
+    width: 40%;
+    height: 50px;
+}

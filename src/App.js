@@ -19,7 +19,9 @@ function App() {
   return (
     <div className="App">
 
-        {isAuthenticated ? <RoutingComponent setIsAuthenticated={setIsAuthenticated}/> : <Home setIsAuthenticated={setIsAuthenticated}/>}
+        {isAuthenticated
+            ? <RoutingComponent setIsAuthenticated={setIsAuthenticated} />
+            : <Home setIsAuthenticated={setIsAuthenticated}/>}
 
     </div>
   );

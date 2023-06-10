@@ -4,7 +4,7 @@ import {fetchData} from "../../API";
 import './HeaderHero.css'
 
 export default function HeaderHero({setIsAuthenticated}) {
-    const [data,setData] = useState({email:"",password:""})
+    const [data,setData] = useState({email:"",password:"",isAdmin:""})
     const handleChange = (e) => {
         const name = e.target.name;
         const value = e.target.value;
@@ -25,6 +25,7 @@ export default function HeaderHero({setIsAuthenticated}) {
                     Cookies.set('isAuthenticated', 'true', { expires: 7 });
                     console.log(response.data.username)
                     Cookies.set('username',response.data.username,{expires: 7})
+                    Cookies.set('isAdmin',response.data.isAdmin,{expires: 7})
 
                 } else {
                     alert(response.data.response);

@@ -11,9 +11,11 @@ header {
 }
 
 .logo-title {
+    position: relative;
     font-size: 36px;
+    font-weight: bold;
     color: #FDFCF3;
-    margin: 10px 0 0 50px;
+    margin: 10px 0 20px 50px;
 }
 
 .login-form {
