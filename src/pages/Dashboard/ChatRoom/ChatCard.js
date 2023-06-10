@@ -22,7 +22,7 @@ export default function ChatCard({ username }) {
 
         async function fetchMessages() {
             try {
-                const response = await fetchData('http://127.0.0.1:5000/api/getmessages');
+                const response = await fetchData('https://socialize-backend-s1gy.onrender.com/api/getmessages');
                 setMessages(response.data);
             } catch (error) {
                 console.error('Błąd podczas pobierania wiadomości:', error);
