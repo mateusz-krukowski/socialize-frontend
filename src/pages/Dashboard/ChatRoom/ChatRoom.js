@@ -1,5 +1,5 @@
 import HeaderMain from "../../../components/HeaderMain";
-import Footer from "../../../components/Footer";
+import './ChatRoom.css'
 import ChatChard from "./ChatCard"
 import {useEffect, useState} from "react";
 import Cookies from "js-cookie";

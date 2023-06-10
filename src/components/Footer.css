@@ -1,7 +1,7 @@
 .Footer {
     border-top: #242424 1px solid;
     width: 100%;
-    position: relative;
+    position: absolute;
     bottom: 0;
     padding: 10px 0;
 }

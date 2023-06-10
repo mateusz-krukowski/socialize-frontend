@@ -45,7 +45,7 @@ export default function ChatCard({ username }) {
         const data = {"user":username,"text":newMessage,"date":date}
         console.log(data)
 
-        fetchData('http://127.0.0.1:5000/api/sendmessage', "POST", data)
+        fetchData('https://socialize-backend-s1gy.onrender.com/api/sendmessage', "POST", data)
             .then((response) => {
                 console.log(response);
             })

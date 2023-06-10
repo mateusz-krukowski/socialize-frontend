@@ -16,7 +16,7 @@ export default function HeaderHero({setIsAuthenticated}) {
 
         console.log(data);
 
-        fetchData('http://127.0.0.1:5000/login', 'POST', data)
+        fetchData('https://socialize-backend-s1gy.onrender.com/login', 'POST', data)
             .then((response) => {
                 console.log(response.data);
                 if (response.status === 200) {
