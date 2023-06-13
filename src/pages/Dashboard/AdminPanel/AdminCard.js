@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import {fetchData} from "../../../API";
 import UserTableRow from "./UserTableRow";
 import UserTableHeader from "./UserTableHeader";
+import ServerTime from "../../../ServerTime";
 
 
 
@@ -20,7 +21,7 @@ export default function AdminCard(){
 
     async function fetchUsers() {
         try {
-            const response = await fetchData('http://127.0.0.1:5000/api/getusers');
+            const response = await fetchData('https://socialize-backend-s1gy.onrender.com/api/getusers');
             setUsers(response.data);
             // console.log(response.data)
 
@@ -62,6 +63,7 @@ export default function AdminCard(){
                 ))}
 
         </div>
+        <ServerTime/>
         <button className="download-users" onClick={saveUsersToFile}>download users</button>
     </div>
 }

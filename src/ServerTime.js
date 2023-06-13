@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import EventSource from 'eventsource';
 
 const ServerTime = () => {
     const [serverTime, setServerTime] = useState('');
 
     useEffect(() => {
-        const eventSource = new EventSource('http://127.0.0.1:5000/get_server_time');
+        const eventSource = new EventSource('https://socialize-backend-s1gy.onrender.com/api/showservertime');
 
         eventSource.addEventListener('message', (event) => {
             setServerTime(event.data);
@@ -17,8 +16,8 @@ const ServerTime = () => {
     }, []);
 
     return (
-        <div>
-            <h2>Server Time:</h2>
+        <div className="d-inline position-fixed bottom-0 start-50 translate-middle">
+            <h2 className="d-inline">Server Time:</h2>
             <p>{serverTime}</p>
         </div>
     );

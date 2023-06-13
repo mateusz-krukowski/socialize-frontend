@@ -39,7 +39,7 @@ export default function UserTableRow({ id, username, email, is_admin, password }
     }
 
     const sendFormData = () => {
-        const url = 'http://127.0.0.1:5000/api/edituser';
+        const url = 'https://socialize-backend-s1gy.onrender.com/api/edituser';
 
         fetchData(url, 'POST', dataToPost)
             .then((response) => {
