@@ -1,4 +1,5 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import  Home from './pages/Home/Home'
 import {useEffect, useState} from "react";
 import Cookies from 'js-cookie';

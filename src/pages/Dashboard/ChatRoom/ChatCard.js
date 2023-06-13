@@ -57,7 +57,7 @@ export default function ChatCard({ username }) {
 
 
     return (
-        <div className="chat-card">
+        <div className="chat-card mt-9">
             <div className="messages-container">
                 {messages.map((message,index) => (
                     <MessageCard

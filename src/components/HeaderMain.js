@@ -15,7 +15,7 @@ export default function HeaderMain({ setIsAuthenticated }) {
 
     return (
         <header className="header-main">
-            <Link to={'/'} className="logo-title">Socialize</Link>
+            <Link to={'/'} className="logo-title pb-8">Socialize</Link>
             <div className="links-container">
                 {isAdmin === "true" ? <Link to={'/admin'}>admin </Link>: null}
                 <Link to={'/chatroom'}>chatroom</Link>

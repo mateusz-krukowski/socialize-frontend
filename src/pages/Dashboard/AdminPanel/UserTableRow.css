@@ -1,0 +1,39 @@
+.user-table-row {
+   display: grid;
+   grid-gap: 1em;
+   grid-template-columns: 1fr 1.9fr 1fr 1fr 1fr 1fr;
+   padding-bottom: 5px;
+   padding-top: 5px;
+   border-bottom: 1px solid black;
+   text-align: left;
+}
+.edit-user-form {
+   display: grid;
+   grid-gap: 0.5em;
+   grid-template-columns: 1fr 1.9fr 1fr 1fr 1fr 1fr;
+   padding-bottom: 5px;
+   padding-top: 5px;
+   width: fit-content;
+   block-size: fit-content;
+}
+.edit-login {
+   width: 6.5vw;
+}
+.edit-email {
+   width: 13vw;
+}
+.edit-is_admin {
+   width: 40px;
+   margin-right: 4vw;
+}
+.edit-password {
+   width: 60px;
+   margin-right: 3.5vw;
+}
+.save {
+   width: 98px;
+   margin-right: 0.5vw;
+}
+.undo {
+   width: 98px;
+}
