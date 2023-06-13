@@ -48,7 +48,7 @@ export default function AdminCard(){
         URL.revokeObjectURL(link.href);
     }
 
-    return <div className="admin-card">
+    return <div className='admin-card'>
         <div className="users-list">
             <UserTableHeader/>
             {users.map((user,index)=> (
